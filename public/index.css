@@ -1,3 +1,14 @@
+:root {
+    --mainBG: #1E1E1E;
+    --btnBG: #2F2F2F;
+    --inputBG: #4C4B4B;
+    --btnActiveBG: #65489F;
+    --earningsColor: #2B990C;
+    --expensesColor: #990C0F;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 body {
     margin: 0;
     height: 200vh;
@@ -9,3 +20,4 @@ body {
     width: 10vw;
     background: black;
 }
+ 
