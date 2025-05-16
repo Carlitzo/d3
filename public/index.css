@@ -75,3 +75,15 @@ h1 {
     margin: 0;
     display: inline;
 }
+
+#tourContainer {
+    height: 100vh;
+}
+
+#tourRightContainer {
+    height: 100%;
+}
+
+#tourLeftContainer {
+    height: 100%;
+}
