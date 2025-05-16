@@ -9,7 +9,12 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+* {
+    color: #FFF;
+}
+
 body {
+    background-color: var(--mainBG);
     margin: 0;
     height: 200vh;
     padding: 5vw;
