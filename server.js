@@ -1,13 +1,16 @@
-import { serveDir, serveFile } from "jsr:@std/http";
+import { serveDir } from "jsr:@std/http";
 
-Deno.serve(async (request) => {
-    const pathname = new URL(request.url).pathname;
+// För loggning med stacktrace
+const originalLog = console.log;
+console.log = (...args) => {
+  const stack = new Error().stack?.split("\n")[2] || "Unknown location";
+  const location = stack.trim().replace(/^at\s+/, "");
+  originalLog(`[${location}]`, ...args);
+};
 
-    if (pathname.startsWith("/static")) {
-        return serveDir(request, {
-            fsRoot: "public",
-            urlRoot: "static",
-            quiet: true
-        });
-    }
+Deno.serve((request) => {
+  return serveDir(request, {
+    fsRoot: "public",
+    quiet: true
+  });
 });
