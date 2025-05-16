@@ -1,3 +1,3 @@
-import { renderSvg  } from "./renderingFunctions/renderSvg/renderSvg.js";
+import { renderSvg } from "./renderingFunctions/renderSvg/renderSvg.js";
 
-renderSvg();
+renderSvg("upperMap");
