@@ -30,6 +30,50 @@
         <div id="divider"></div>
         <div id="tourContainer">
 
+            <div id="tourLeftContainer">
+                
+                <div id="mapAndHeaderContainer">
+                    <h1 class="mapHeaders">My Tour:</h1>
+                    <div class="mapSvg"></div>
+                </div>
+
+                <div id="buttonsAndInputContainer">
+                    <div id="buttonsContainer">
+                        <div id="expenseButtonContainer">
+                            <h2>Add Expense</h2>
+                            <button id="btnAddExpense">+</button>
+                        </div>
+
+                        <div id="tourEthnicityButtonContainer"></div>
+                        <div id="tourGenderButtonContainer"></div>
+                    </div>
+
+                    <div id="inputContainer">
+                        <div class="expenseInputContainer">
+                            <div id="expense1">
+                                <input class="expenseCategoryInput" label="Expense Category">
+                                <input class="expenseAmountInput" label="Amount">
+                            </div>
+
+                            <!--När vi sen skapar funktion för att lägga till expenses osv, lägg på en siffra på div id="expense1"-->
+                            <!--För att räkna ut, selektera expenseInputContainer, -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div id="tourRightContainer">
+                <div id="earningsAndExpensesContainer">
+                    <div id="earningsDisplay"></div>
+                    <div id="expensesDisplay"></div>
+
+                    <div id="summaryContainer"></div>
+                </div>
+            </div>
+
         </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script type="module" src="index.js"></script>
