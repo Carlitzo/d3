@@ -87,3 +87,24 @@ h1 {
 #tourLeftContainer {
     height: 100%;
 }
+
+.expenseCategoryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.expenseAmountContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputContainer {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+}
+
+.expenseInputContainer > div {
+    display: flex;
+    gap: 1rem;
+}
