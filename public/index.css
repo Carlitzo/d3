@@ -27,9 +27,9 @@ body {
 }
 
 #citiesContainer {
+    font-family:'Courier New', Courier, monospace;
     height: 90%;
-    width: 15%;
-    background: white;
+    width: 18%;
 }
 
 #mapAndButtonsContainer {
@@ -48,7 +48,6 @@ body {
 }
 
 #gradientAndBarsContainer {
-    background: white;
     height: 90%;
     width: 30%;
     display: flex;
@@ -60,15 +59,16 @@ body {
 }
 
 #gradientContainer {
-    background: black;
+    background: linear-gradient(#fcfbfd, #3f007d );
+    transform:rotate(180deg);
     height: 100%;
-    width: 20%;
+    width: 10%;
 }
 
 #barsContainer {
     background: black;
     height: 100%;
-    width: 80%;
+    width: 90%;
 }
 
 h1 {
