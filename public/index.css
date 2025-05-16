@@ -15,9 +15,24 @@ body {
     padding: 5vw;
 }
 
+#earningsContainer {
+    display: flex;
+}
+
 #citiesContainer {
     height: 50vh;
     width: 10vw;
     background: black;
 }
- 
+
+#mapAndButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+}
+
+h1 {
+    margin: 0;
+    display: inline;
+}
