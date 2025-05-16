@@ -17,20 +17,20 @@ body {
     background-color: var(--mainBG);
     margin: 0;
     height: 200vh;
-    padding: 5vw;
+    padding: 3rem;
     
 }
 
 #earningsContainer {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #citiesContainer {
     height: 90%;
-    width: 20%;
-    background: black;
+    width: 15%;
+    background: white;
 }
 
 #mapAndButtonsContainer {
@@ -39,6 +39,37 @@ body {
     height: 90%;
     width: 70%;
     margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#yearButtonsContainer {
+    background: white;
+    height: 30%;
+    width: 100%;
+}
+
+#gradientAndBarsContainer {
+    background: white;
+    height: 90%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    gap: 1rem;
+}
+
+#gradientContainer {
+    background: black;
+    height: 100%;
+    width: 20%;
+}
+
+#barsContainer {
+    background: black;
+    height: 100%;
+    width: 80%;
 }
 
 h1 {

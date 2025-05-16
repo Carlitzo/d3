@@ -7,7 +7,7 @@ export function renderSvg() {
         .attr("height", "100%");
 
     const g = svg.append("g")
-        .attr("transform", "scale(0.7)");
+        .attr("transform", "scale(0.9)");
 
     fetch("./images/china.svg")
         .then(r => r.text())
