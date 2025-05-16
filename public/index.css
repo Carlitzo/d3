@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    height: 200vh;
+    padding: 5vw;
+}
+
+#citiesContainer {
+    height: 50vh;
+    width: 10vw;
+    background: black;
+}
