@@ -112,16 +112,10 @@ h1 {
     margin-left: 95%;
 }
 
-.removeExpenseBtn, #btnAddExpense {
-    background-color: #2F2F2F;
-    border-radius: 10%;
-    border: 1px solid #4C4B4B;
-}
-
 #btnAddExpense {
     font-size: 1.5rem;
 }
 
-#btnAddExpense:hover, .removeExpenseBtn:hover {
-    cursor: pointer;
+#tourContainer button {
+    border-radius: 3px;
 }
