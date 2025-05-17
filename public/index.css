@@ -78,14 +78,18 @@ h1 {
 
 #tourContainer {
     height: 100vh;
+    display: flex;
+    gap: 1rem;
 }
 
 #tourRightContainer {
     height: 100%;
+    width: 20vw;
 }
 
 #tourLeftContainer {
     height: 100%;
+    flex-grow: 1;
 }
 
 .expenseCategoryContainer {
@@ -107,4 +111,32 @@ h1 {
 .expenseInputContainer > div {
     display: flex;
     gap: 1rem;
+}
+
+.expenseInput {
+    padding: 1rem;
+}
+
+.expenseInput input {
+    border-radius: 2%;
+    border: 1px solid #4C4B4B;
+    background-color: #2F2F2F;
+}
+
+.removeExpenseBtn {
+    margin-left: 95%;
+}
+
+.removeExpenseBtn, #btnAddExpense {
+    background-color: #2F2F2F;
+    border-radius: 10%;
+    border: 1px solid #4C4B4B;
+}
+
+#btnAddExpense {
+    font-size: 1.5rem;
+}
+
+#btnAddExpense:hover, .removeExpenseBtn:hover {
+    cursor: pointer;
 }
