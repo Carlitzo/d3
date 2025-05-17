@@ -32,21 +32,6 @@ body {
     width: 18%;
 }
 
-#mapAndButtonsContainer {
-    display: flex;
-    flex-direction: column;
-    height: 90%;
-    width: 70%;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-#yearButtonsContainer {
-    background: white;
-    height: 30%;
-    width: 100%;
-}
-
 #gradientAndBarsContainer {
     height: 90%;
     width: 30%;
