@@ -7,3 +7,10 @@ renderCities();
 renderTopButtons("ethnicityButtonsContainer");
 renderTopButtons("genderButtonsContainer");
 renderTopButtons("yearButtonsContainer");
+
+function ewr ({gender, ethnicity, year}) {
+    year = parseInt(year);''
+    gender = getAmountOfGigsBy({gender: gender, year: year});
+
+
+}

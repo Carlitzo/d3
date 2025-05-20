@@ -41,7 +41,10 @@ function findYears() {
         }
     }
     
-    return years.sort();
+    const sortedYears = years.sort();
+    sortedYears.push("ALL");
+    
+    return sortedYears;
 }
 
 function findGenders() {
