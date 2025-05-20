@@ -14,26 +14,19 @@ export function renderTopButtons(parent) {
             break;
     }
 
-    for (let i = 0; i < buttonData.length; i++) {
-        const ele = buttonData[i];
+    for (let ele of buttonData) {
         let button = document.createElement("button");
-
         if (isNaN(ele)) {
             button.className = ele;
             button.textContent = ele.charAt(0).toUpperCase() + ele.slice(1);
-        } else {
+        }else {
             button.className = `year-${ele}`;
             button.textContent = ele;
-        }
-
-        if (i === 0) {
-            button.classList.add("selected");
         }
 
         parentContainer.appendChild(button);
     }
 }
-
 
 function findYears() {
     const gigs = Gigs; //plockar ut gigs från dataset för tydlighet
@@ -65,7 +58,7 @@ function findGenders() {
             genders.push(gender);
         }
     }
-
+    console.log(genders)
     return genders;
 }
 
