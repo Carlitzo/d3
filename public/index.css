@@ -44,14 +44,26 @@ body {
 }
 
 #gradientContainer {
-    background: linear-gradient(#fcfbfd, #3f007d );
-    transform:rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
     height: 100%;
     width: 10%;
 }
 
+#gradientContainer p {
+    margin: 0;
+}
+
+#gradientDisplay {
+    background: linear-gradient(#fcfbfd, #3f007d );
+    transform:rotate(180deg);
+    height: 100%;
+    width: 100%;
+}
+
 #barsContainer {
-    background: black;
     height: 100%;
     width: 90%;
 }
@@ -63,14 +75,18 @@ h1 {
 
 #tourContainer {
     height: 100vh;
+    display: flex;
+    gap: 1rem;
 }
 
 #tourRightContainer {
     height: 100%;
+    width: 20vw;
 }
 
 #tourLeftContainer {
     height: 100%;
+    flex-grow: 1;
 }
 
 .expenseCategoryContainer {
@@ -92,4 +108,26 @@ h1 {
 .expenseInputContainer > div {
     display: flex;
     gap: 1rem;
+}
+
+.expenseInput {
+    padding: 1rem;
+}
+
+.expenseInput input {
+    border-radius: 2%;
+    border: 1px solid #4C4B4B;
+    background-color: #2F2F2F;
+}
+
+.removeExpenseBtn {
+    margin-left: 95%;
+}
+
+#btnAddExpense {
+    font-size: 1.5rem;
+}
+
+#tourContainer button {
+    border-radius: 3px;
 }
