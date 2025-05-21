@@ -88,12 +88,12 @@ h2 {
 
 #tourRightContainer {
     height: 100%;
-    width: 20vw;
+    width: 20%;
 }
 
 #tourLeftContainer {
     height: 100%;
-    flex-grow: 1;
+    width: 70%;
 }
 
 .expenseCategoryContainer {
