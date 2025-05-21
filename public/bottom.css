@@ -1,0 +1,65 @@
+.expenseInputContainer > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.expenseInput {
+    padding: 1rem;
+}
+
+.expenseInput input {
+    border-radius: 2%;
+    border: 1px solid #4C4B4B;
+    background-color: #2F2F2F;
+}
+
+.removeExpenseBtn {
+    margin-left: 95%;
+}
+
+.expenseCategoryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.expenseAmountContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#btnAddExpense {
+    font-size: 1.5rem;
+}
+
+#earningsAndExpensesContainer {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--inputBG);
+}
+
+#inputContainer {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+}
+
+#tourContainer {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#tourContainer button {
+    border-radius: 3px;
+}
+
+#tourLeftContainer {
+    height: 100%;
+    width: 70%;
+}
+
+#tourRightContainer {
+    height: 100%;
+    width: 20%;
+}
