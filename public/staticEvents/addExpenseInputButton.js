@@ -3,7 +3,7 @@
 export function addExpenseButtonEvent(event) {
     const expenseInput = document.querySelectorAll(".expenseInput");
     console.log(expenseInput.length);
-    if (expenseInput.length > 23) {
+    if (expenseInput.length > 11) {
         console.log("max number added cuuh");
         return;
     }

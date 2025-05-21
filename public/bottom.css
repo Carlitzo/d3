@@ -33,7 +33,7 @@
 
 #buttonsAndInputContainer {
     grid-row: 2;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
 }
 
 #earningsAndExpensesContainer {
@@ -45,7 +45,9 @@
 #inputContainer {
     display: grid;
     grid-template-columns:repeat(4, 1fr);
-    grid-template-rows:repeat(6, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+
+    height: 50vh;
 }
 
 #tourContainer {
