@@ -1,12 +1,15 @@
 export function renderCities(Parent) {
     const parent = document.getElementById(Parent);
+    let citiesUL = document.createElement("ul");
+    citiesUL.id = "citiesUL";
+    parent.appendChild(citiesUL);
     const cities = Cities;
 
     for (let i = 0; i < cities.length; i++) {
-        let cityP = document.createElement("p");
-        cityP.id = cities[i].name;
-        cityP.textContent = `${(i + 1)}.  ${cities[i].name}`;
+        let cityLi = document.createElement("li");
+        cityLi.id = cities[i].name;
+        cityLi.textContent = `${(i + 1)}.  ${cities[i].name}`;
 
-        parent.appendChild(cityP);
+        citiesUL.appendChild(cityLi);
     }
 }
