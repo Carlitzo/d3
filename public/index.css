@@ -18,6 +18,7 @@ body {
     margin: 0;
     height: 200vh;
     padding: 3rem;
+    padding-right: 1rem;
 }
 
 #earningsContainer {
@@ -64,6 +65,8 @@ body {
 }
 
 #barsContainer {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 90%;
 }
