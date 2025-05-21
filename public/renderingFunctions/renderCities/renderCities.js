@@ -1,5 +1,5 @@
-export function renderCities() {
-    const parent = document.getElementById("citiesContainer");
+export function renderCities(Parent) {
+    const parent = document.getElementById(Parent);
     const cities = Cities;
 
     for (let i = 0; i < cities.length; i++) {

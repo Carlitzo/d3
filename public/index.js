@@ -6,7 +6,8 @@ import { renderTopButtons } from "./renderingFunctions/renderTopButtons/renderTo
 import { renderBars } from "./renderingFunctions/renderBars/renderBars.js";
 
 renderSvg("upperMap");
-renderCities();
+renderCities("citiesContainerTop");
+renderCities("citiesContainerBottom");
 renderTopButtons("ethnicityButtonsContainer");
 renderTopButtons("genderButtonsContainer");
 renderTopButtons("yearButtonsContainer");

@@ -13,7 +13,7 @@
     </head>
     <body>
         <div id="earningsContainer">
-            <div id="citiesContainer">
+            <div id="citiesContainerTop">
             </div>
             <div id="mapAndButtonsContainer">
                 <h2 class="mapHeaders"> Total earnings per city</h1>
@@ -37,36 +37,14 @@
         </div>
         <div id="divider"></div>
         <div id="tourContainer">
-
+            <div id="citiesContainerBottom">
+            </div>
             <div id="tourLeftContainer">
-                <div id="citiesContainer">
-                </div>
                 <div id="mapAndHeaderContainer">
-                    <h1 class="mapHeaders">My Tour:</h1>
+                    <h2 class="mapHeaders">My Tour:</h1>
                     <div class="mapSvg"></div>
                 </div>
-
-                <div id="buttonsAndInputContainer">
-                    <div id="buttonsContainer">
-                        <div id="expenseButtonContainer">
-                            <h2>Add Expense</h2>
-                            <button id="btnAddExpense">+</button>
-                        </div>
-
-                        <div id="tourEthnicityButtonContainer"></div>
-                        <div id="tourGenderButtonContainer"></div>
-                    </div>
-
-                    <div id="inputContainer">
-
-                    </div>
-                    <button id="btnCalc">Calculate</button>
-                </div>
-
-
-
             </div>
-
             <div id="tourRightContainer">
                 <div id="earningsAndExpensesContainer">
                     <div id="earningsDisplay"></div>
@@ -75,7 +53,19 @@
                     <div id="summaryContainer"></div>
                 </div>
             </div>
-
+            <div id="buttonsAndInputContainer">
+                <div id="buttonsContainer">
+                    <div id="expenseButtonContainer">
+                        <h2>Add Expense</h2>
+                        <button id="btnAddExpense">+</button>
+                    </div>
+                    <div id="tourEthnicityButtonContainer"></div>
+                    <div id="tourGenderButtonContainer"></div>
+                </div>
+                <div id="inputContainer">
+                </div>
+                <button id="btnCalc">Calculate</button>
+            </div>
         </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="dataset.js"></script>

@@ -1,4 +1,20 @@
-#citiesContainer > p {
+#citiesContainerTop {
+    font-family:'Courier New', Courier, monospace;
+    height: 90%;
+    width: 22%;
+}
+
+#citiesContainerBottom {
+    font-family:'Courier New', Courier, monospace;
+    width: 22%;
+}
+
+#citiesContainerTop > p {
     margin-top: 0.73rem;
+    margin-bottom: 0;
+}
+
+#citiesContainerBottom > p {
+    margin-top: 0.6rem;
     margin-bottom: 0;
 }
