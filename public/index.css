@@ -21,82 +21,15 @@ body {
     padding-right: 1rem;
 }
 
-#divider {
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 5rem;
-    border-bottom: 1px solid var(--inputBG);
-}
-
 h2 {
     margin: 0;
     display: inline;
     letter-spacing: 0.1rem;
 }
 
-#tourContainer {
-    height: 100vh;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-#tourRightContainer {
-    height: 100%;
-    width: 20%;
-}
-
-#tourLeftContainer {
-    height: 100%;
-    width: 70%;
-}
-
-.expenseCategoryContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.expenseAmountContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-#inputContainer {
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows:repeat(6, 1fr);
-}
-
-.expenseInputContainer > div {
-    display: flex;
-    gap: 1rem;
-}
-
-.expenseInput {
-    padding: 1rem;
-}
-
-.expenseInput input {
-    border-radius: 2%;
-    border: 1px solid #4C4B4B;
-    background-color: #2F2F2F;
-}
-
-.removeExpenseBtn {
-    margin-left: 95%;
-}
-
-#btnAddExpense {
-    font-size: 1.5rem;
-}
-
-#tourContainer button {
-    border-radius: 3px;
-}
-
-#earningsAndExpensesContainer {
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--inputBG);
-    
+#divider {
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid var(--inputBG);
 }
