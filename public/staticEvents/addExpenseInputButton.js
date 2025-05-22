@@ -8,8 +8,6 @@ export function addExpenseButtonEvent(event) {
         return;
     }
 
-
-    // Find the highest ID of all elements
     let highestNumber = 0;
 
     for (let ele of expenseInput) {
