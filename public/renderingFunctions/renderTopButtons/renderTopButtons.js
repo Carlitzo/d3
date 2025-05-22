@@ -1,3 +1,5 @@
+import { updateBars } from "../renderBars/renderBars.js";
+
 export function renderTopButtons(parent) {
     const parentContainer = document.getElementById(parent);
     let buttonData = [];
@@ -23,6 +25,15 @@ export function renderTopButtons(parent) {
             button.className = `year-${ele}`;
             button.textContent = ele;
         }
+
+        button.addEventListener("click", (event) => {
+            let nodeList = parentContainer.querySelectorAll("button");
+            for (let btn of nodeList) {
+                btn.classList.remove("selected");
+            }
+            event.target.classList.add("selected");
+            updateBars();
+        })
 
         parentContainer.appendChild(button);
     }
@@ -58,7 +69,7 @@ function findGenders() {
             genders.push(gender);
         }
     }
-    console.log(genders)
+    
     return genders;
 }
 
