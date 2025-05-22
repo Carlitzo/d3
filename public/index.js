@@ -5,6 +5,7 @@ import { addExpenseButtonEvent } from "./staticEvents/addExpenseInputButton.js";
 import { renderTopButtons } from "./renderingFunctions/renderTopButtons/renderTopButtons.js";
 import { renderBars } from "./renderingFunctions/renderBars/renderBars.js";
 import { updateBars } from "./renderingFunctions/renderBars/renderBars.js";
+import { renderHeatmap } from "./renderingFunctions/renderHeatmap/renderHeatmap.js";
 
 renderSvg("upperMap");
 renderCities("citiesContainerTop");
@@ -15,5 +16,5 @@ renderTopButtons("yearButtonsContainer");
 renderBars();
 setEvents();
 addExpenseButtonEvent();
-
 updateBars();
+renderHeatmap();

@@ -1,4 +1,4 @@
-import { filterFunction } from "../../logic/filter.js";
+import { filterByAmountOfGigs } from "../../logic/filters.js";
 
 let xScale, yScale, colorScale, svg;
 
@@ -11,7 +11,7 @@ const padding = {
 export function renderBars() {
     const svgHeight = "100%", svgWidth  = "100%";
 
-    const data = filterFunction();
+    const data = filterByAmountOfGigs();
     
     const maxAmountOfGigs = d3.max(data, d => d.amountOfGigs);
     const minAmountOfGigs = d3.min(data, d => d.amountOfGigs);
@@ -47,7 +47,7 @@ export function renderBars() {
 
 export function updateBars() {
 
-    let newData = filterFunction();
+    let newData = filterByAmountOfGigs();
 
     const newMax = d3.max(newData, d => d.amountOfGigs);
     xScale.domain([0, newMax]);

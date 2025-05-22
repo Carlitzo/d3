@@ -1,4 +1,5 @@
 import { updateBars } from "../renderBars/renderBars.js";
+import { renderHeatmap } from "../renderHeatmap/renderHeatmap.js";
 
 export function renderTopButtons(parent) {
     const parentContainer = document.getElementById(parent);
@@ -33,6 +34,7 @@ export function renderTopButtons(parent) {
             }
             event.target.classList.add("selected");
             updateBars();
+            renderHeatmap();
         })
 
         parentContainer.appendChild(button);
