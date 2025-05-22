@@ -1,3 +1,5 @@
+import { renderHeatmap } from "../renderHeatmap/renderHeatmap.js";
+
 export function renderSvg() {
 
     const parents = document.querySelectorAll(".mapSvg");
@@ -27,6 +29,8 @@ export function renderSvg() {
                     .attr("fill", "#C7C7C7")
                     .attr("stroke", "white")
                     .attr("stroke-width", 1);
+
+                renderHeatmap();
             });
         })
         .catch(err => console.error("Failed to load SVG:", err));

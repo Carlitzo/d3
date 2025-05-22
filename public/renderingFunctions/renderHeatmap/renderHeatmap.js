@@ -14,7 +14,7 @@ export function renderHeatmap() {
     data.forEach((element) => {
         let color = colorScale(element.earnings);
 
-        d3.select(element.mapID)
+        d3.select(`#${element.mapID}`)
             .transition()
             .duration(700)
             .style("fill", color);

@@ -34,7 +34,6 @@ export function renderTopButtons(parent) {
             }
             event.target.classList.add("selected");
             updateBars();
-            renderHeatmap();
         })
 
         parentContainer.appendChild(button);
