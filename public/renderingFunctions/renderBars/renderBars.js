@@ -59,5 +59,6 @@ export function updateBars() {
         .transition()
         .duration(700)
         .attr("width", (d, i, nodes) => xScale(d.amountOfGigs))
-    
+        .attr("fill", (d, i, nodes) => colorScale(d.amountOfGigs));
+        
 };
