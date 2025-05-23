@@ -1,0 +1,24 @@
+#bottomGenderAndEthnicityButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+#bottomEthnicityButtonsContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+#bottomGenderButtonsContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+#tourLeftContainer button {
+    min-width: 3.75rem;
+    width: 100%;
+    height: 1.8rem;
+    border-radius: 3px;
+}

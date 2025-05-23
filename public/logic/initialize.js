@@ -6,6 +6,7 @@ import { renderTopButtons } from "./../renderingFunctions/renderTopButtons/rende
 import { renderBars } from "./../renderingFunctions/renderBars/renderBars.js";
 import { updateBars } from "./../renderingFunctions/renderBars/renderBars.js";
 import { renderHeatmap } from "./../renderingFunctions/renderHeatmap/renderHeatmap.js";
+import { renderBottomButtons } from "../renderingFunctions/renderBottomButtons/renderBottomButtons.js";
 
 export function initialize () {
 
@@ -20,5 +21,9 @@ export function initialize () {
     addExpenseButtonEvent();
     updateBars();
     renderHeatmap();
+
+    renderBottomButtons("bottomEthnicityButtonsContainer");
+    renderBottomButtons("bottomGenderButtonsContainer");
+
 
 }
