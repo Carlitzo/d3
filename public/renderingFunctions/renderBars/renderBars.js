@@ -4,10 +4,11 @@ let xScale, yScale, colorScale, svg;
 
 const padding = {
     top: 10,
-    bottom: 10,
+    bottom: 25,
     left: 10,
     right: 10
 }
+
 export function renderBars() {
     const svgHeight = "100%", svgWidth  = "100%";
 
@@ -26,7 +27,7 @@ export function renderBars() {
     const height = boundingRect.height;
 
     xScale = d3.scaleLinear().domain([0, maxAmountOfGigs]).range([padding.left, width]);
-    yScale = d3.scaleBand().domain(data).range([0, height]).paddingInner(0.2).paddingOuter(0.4);
+    yScale = d3.scaleBand().domain(data).range([0, height - padding.bottom]).paddingInner(0.2).paddingOuter(0.4);
     colorScale = d3.scaleSequential().domain([0, maxAmountOfGigs]).interpolator(d3.interpolatePurples);
     
     const barwidth = yScale.bandwidth();
@@ -53,7 +54,7 @@ export function updateBars() {
     xScale.domain([0, newMax]);
     colorScale.domain([0, newMax]);
 
-    const barGroup = d3.select("#barGroup")
+    d3.select("#barGroup")
         .selectAll("rect")
         .data(newData)
         .transition()
