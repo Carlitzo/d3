@@ -1,5 +1,5 @@
 
-export function checkForAppliedFilters() {
+export function applyFilters() {
     const selectedEthnicityContainer = document.getElementById("ethnicityButtonsContainer");
     const selectedEthnicity = selectedEthnicityContainer.querySelector(".selected");
     const selectedGenderContainer = document.getElementById("genderButtonsContainer");

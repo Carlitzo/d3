@@ -19,7 +19,6 @@ export function renderSvg() {
                     .attr("height", "100%");
 
                 const g = svg.append("g")
-                    
 
                 const clone = importedSvg.cloneNode(true);
 

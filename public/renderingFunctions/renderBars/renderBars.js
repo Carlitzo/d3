@@ -10,9 +10,12 @@ const padding = {
 }
 
 export function renderBars() {
+
     const svgHeight = "100%", svgWidth  = "100%";
 
     const data = filterByAmountOfGigs();
+
+    console.log(data);
     
     const maxAmountOfGigs = d3.max(data, d => d.amountOfGigs);
     
@@ -25,11 +28,11 @@ export function renderBars() {
     const width = boundingRect.width;
     const height = boundingRect.height;
 
-    xScale = d3.scaleLinear().domain([0, maxAmountOfGigs]).range([padding.left, width]);
+    xScale = d3.scaleLinear().domain([0, maxAmountOfGigs]).range([padding.left, width - padding.right]);
     yScale = d3.scaleBand().domain(data).range([0, height - padding.bottom]).paddingInner(0.2).paddingOuter(0.4);
     colorScale = d3.scaleSequential().domain([0, maxAmountOfGigs]).interpolator(d3.interpolatePurples);
     
-    const yAxisScale = d3.scaleBand().domain(d3.range(1,25)).range([0, height - padding.bottom]).padding(0.6)
+    const yAxisScale = d3.scaleBand().domain(d3.range(1,25)).range([0, height - padding.bottom]).padding(0.6);
     const barwidth = yScale.bandwidth();
 
     const yAxis = d3.axisLeft(yAxisScale).tickValues(d3.range(1,25));
@@ -46,7 +49,7 @@ export function renderBars() {
         .data(data)
         .enter()
         .append("rect")
-        .attr("width", (d, i, nodes) => xScale(d.amountOfGigs))
+        .attr("width", d => xScale(d.amountOfGigs) - xScale(0))
         .attr("height", barwidth)
         .attr("x", padding.left)
         .attr("y", (d, i, nodes) => yScale(d))
@@ -62,15 +65,16 @@ export function updateBars() {
     xScale.domain([0, newMax]);
     colorScale.domain([0, newMax]);
 
+    console.log(newData, newMax, xScale.domain());
+
     d3.select("#barGroup")
         .selectAll("rect")
         .data(newData)
         .transition()
         .duration(700)
-        .attr("width", (d, i, nodes) => xScale(d.amountOfGigs))
+        .attr("width", d => xScale(d.amountOfGigs) - xScale(0))
         .attr("fill", (d, i, nodes) => colorScale(d.amountOfGigs));
-        
-};
 
+};
 
 // finns nyckel i event-objekt cursor.x cursor.x (ungefär);
