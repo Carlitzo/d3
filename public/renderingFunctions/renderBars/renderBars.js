@@ -14,8 +14,6 @@ export function renderBars() {
     const svgHeight = "100%", svgWidth  = "100%";
 
     const data = filterByAmountOfGigs();
-
-    console.log(data);
     
     const maxAmountOfGigs = d3.max(data, d => d.amountOfGigs);
     
@@ -65,8 +63,6 @@ export function updateBars() {
     xScale.domain([0, newMax]);
     colorScale.domain([0, newMax]);
 
-    console.log(newData, newMax, xScale.domain());
-
     d3.select("#barGroup")
         .selectAll("rect")
         .data(newData)
@@ -76,5 +72,3 @@ export function updateBars() {
         .attr("fill", (d, i, nodes) => colorScale(d.amountOfGigs));
 
 };
-
-// finns nyckel i event-objekt cursor.x cursor.x (ungefär);
