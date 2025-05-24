@@ -6,8 +6,10 @@
     --earningsColor: #2B990C;
     --expensesColor: #990C0F;
 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
     color: #FFF;
@@ -25,12 +27,11 @@ h2 {
     margin: 0;
     margin-top: 0.2rem;
     display: inline;
-    letter-spacing: 0.1rem;
     line-height: 0.62;
 }
 
-#divider {
-    width: 90vw;
+.divider {
+    width: 90%;
     margin: auto;
     margin-bottom: 5rem;
     border-bottom: 1px solid var(--inputBG);

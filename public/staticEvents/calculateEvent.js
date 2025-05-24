@@ -31,7 +31,7 @@ function displayEarnings(selectedCities) {
     
     arrayCitiesEarnings.forEach( (city) => {
         const li = document.createElement("li");
-        li.textContent = `${city.name}: ${city.earnings}`;
+        li.textContent = `${city.name}: ${city.earnings}:-`;
         citiesList.appendChild(li);
     });
 
