@@ -1,8 +1,8 @@
-import { checkForAppliedFilters } from "./checkForAppliedFilters.js";
+import { applyFilters } from "./applyFilters.js";
 
 export function filterByAmountOfGigs() {
 
-    checkForAppliedFilters();
+    applyFilters();
     
     const selectedEthnicityText = document.querySelector("#ethnicityButtonsContainer > .selected").textContent.toLowerCase();
     const selectedGenderText = document.querySelector("#genderButtonsContainer > .selected").textContent.toLowerCase();
