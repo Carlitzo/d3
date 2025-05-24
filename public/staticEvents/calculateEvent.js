@@ -31,7 +31,7 @@ function displayEarnings(selectedCities) {
     
     arrayCitiesEarnings.forEach( (city) => {
         const li = document.createElement("li");
-        li.textContent = `${city.name}: ${city.earnings}:-`;
+        li.textContent = `${city.name}: ${city.earnings.toLocaleString()}:-`;
         citiesList.appendChild(li);
     });
 
@@ -46,7 +46,7 @@ function displayExpenses(expenseArray) {
     
     allInputExpenseCategories.forEach( (category, index) => {
         const li = document.createElement("li");
-        li.textContent = `${category.value}: ${allInputExpenseAmounts[index].value}`;
+        li.textContent = `${category.value}: ${(parseInt(allInputExpenseAmounts[index].value)).toLocaleString()}`;
         expenseList.appendChild(li);
     });
 
@@ -67,7 +67,7 @@ function calculateTotalEarnings() {
 
     let textColor = totalSummary < 0 ? "redText" : "greenText";
 
-    headerSummary.innerHTML = `Summary: <span id=${textColor}>${totalSummary}</span>`;
+    headerSummary.innerHTML = `Summary: <span id=${textColor}>${totalSummary.toLocaleString()}</span>`;
 
 
 }
