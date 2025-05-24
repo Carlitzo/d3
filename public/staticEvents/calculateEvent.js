@@ -1,3 +1,5 @@
+let arrayCitiesEarnings = [{"name": "Khansaar", "earnings": 150000}, {"name": " Krzystanopolis", "earnings": 275000}];
+
 export function checkAllInputsEntered(event) {
     const allExpenseCategoryInputs = document.querySelectorAll(".expenseCategoryInput");
     const allExpenseAmountInputs = document.querySelectorAll(".expenseAmountInput");
@@ -17,19 +19,55 @@ export function checkAllInputsEntered(event) {
     }
 
 
-    console.log("THIS SHOULDNT SHOW")
+    displayEarnings()
+    displayExpenses()
+    calculateTotalEarnings()
 }
 
-function calculateAndDisplayEarnings(selectedCities) {
+function displayEarnings(selectedCities) {
 
+    const earningsDisplay = document.getElementById("earningsDisplay");
+    const citiesList = document.createElement("ul");
+    
+    arrayCitiesEarnings.forEach( (city) => {
+        const li = document.createElement("li");
+        li.textContent = `${city.name}: ${city.earnings}`;
+        citiesList.appendChild(li);
+    });
+
+    earningsDisplay.appendChild(citiesList);
 }
 
-function calculateAndDisplayExpenses(expenseArray) {
+function displayExpenses(expenseArray) {
+    const expensesDisplay = document.getElementById("expensesDisplay");
+    const expenseList = document.createElement("ul");
+    const allInputExpenseCategories = document.querySelectorAll(".expenseCategoryInput");
+    const allInputExpenseAmounts = document.querySelectorAll(".expenseAmountInput");
+    
+    allInputExpenseCategories.forEach( (category, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${category.value}: ${allInputExpenseAmounts[index].value}`;
+        expenseList.appendChild(li);
+    });
 
+    expensesDisplay.appendChild(expenseList);
 }
 
-function calculateButtonEvent(arrayCitiesEarnings) {
-    arrayCitiesEarnings = [{"name": "Khansaar", "earnings": 150000}, {"name": "Khansaar", "earnings": 275000}];
+function calculateTotalEarnings() {
+    const citiesEarnings = arrayCitiesEarnings;
+    const allInputExpenseAmounts = document.querySelectorAll(".expenseAmountInput");
+    const headerSummary = document.getElementById("summaryHeader");
+
+    let totalExpenses = 0;
+    allInputExpenseAmounts.forEach( input => totalExpenses += parseInt(input.value));
+    let totalEarnings = 0;
+    citiesEarnings.forEach( city => totalEarnings += parseInt(city.earnings));
+
+    let totalSummary = totalEarnings - totalExpenses;
+
+    let textColor = totalSummary < 0 ? "redText" : "greenText";
+
+    headerSummary.innerHTML = `Summary: <span id=${textColor}>${totalSummary}</span>`;
 
 
 }
