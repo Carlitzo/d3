@@ -43,7 +43,7 @@
     padding: 3rem;
 
     display: grid;
-    grid-template-rows: 4fr 1rem 4fr 1fr;
+    grid-template-rows: 4fr 1rem 4fr 1rem 1fr;
 }
 
 #greenText {
@@ -75,8 +75,8 @@
 
 #summaryContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    margin-top: 1rem;
 }
 
 #tourContainer button {
@@ -108,4 +108,32 @@
 
 #expensesDisplay {
     margin-top: 1rem;
+}
+
+.earningsAndExpensesUL {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+}
+
+.earningsAndExpenseLI {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.greenCircle {
+    border-radius: 50%;
+    background-color: green;
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.redCircle {
+    border-radius: 50%;
+    background-color: red;
+    width: 0.7rem;
+    height: 0.7rem;
 }

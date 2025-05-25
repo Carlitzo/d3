@@ -28,10 +28,14 @@ function displayEarnings(selectedCities) {
 
     const earningsDisplay = document.getElementById("earningsDisplay");
     const citiesList = document.createElement("ul");
+
+    citiesList.classList.add("earningsAndExpensesUL");
     
     arrayCitiesEarnings.forEach( (city) => {
         const li = document.createElement("li");
         li.textContent = `${city.name}: ${city.earnings.toLocaleString()}:-`;
+        li.innerHTML += `<div class="greenCircle"></div>`
+        li.classList.add("earningsAndExpenseLI");
         citiesList.appendChild(li);
     });
 
@@ -44,9 +48,13 @@ function displayExpenses(expenseArray) {
     const allInputExpenseCategories = document.querySelectorAll(".expenseCategoryInput");
     const allInputExpenseAmounts = document.querySelectorAll(".expenseAmountInput");
     
+    expenseList.classList.add("earningsAndExpensesUL");
+
     allInputExpenseCategories.forEach( (category, index) => {
         const li = document.createElement("li");
-        li.textContent = `${category.value}: ${(parseInt(allInputExpenseAmounts[index].value)).toLocaleString()}`;
+        li.textContent = `${category.value}: ${(parseInt(allInputExpenseAmounts[index].value)).toLocaleString()}:-`;
+        li.innerHTML += `<div class="redCircle"></div>`
+        li.classList.add("earningsAndExpenseLI");
         expenseList.appendChild(li);
     });
 
@@ -67,7 +75,7 @@ function calculateTotalEarnings() {
 
     let textColor = totalSummary < 0 ? "redText" : "greenText";
 
-    headerSummary.innerHTML = `Summary: <span id=${textColor}>${totalSummary.toLocaleString()}</span>`;
+    headerSummary.innerHTML = `Summary: <span id=${textColor}>${totalSummary.toLocaleString()}:-</span>`;
 
 
 }
