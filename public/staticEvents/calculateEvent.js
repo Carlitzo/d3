@@ -18,6 +18,7 @@ export function checkAllInputsEntered(event) {
         }
     }
 
+    document.querySelectorAll(".earningsAndExpensesUL")?.forEach( ele => ele.remove() );
 
     displayEarnings()
     displayExpenses()
