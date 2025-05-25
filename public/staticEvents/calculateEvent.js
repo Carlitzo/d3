@@ -1,4 +1,4 @@
-let arrayCitiesEarnings = [{"name": "Khansaar", "earnings": 150000}, {"name": " Krzystanopolis", "earnings": 275000}];
+import { getClickedCities } from "./getClickedCities.js";
 
 export function checkAllInputsEntered(event) {
     const allExpenseCategoryInputs = document.querySelectorAll(".expenseCategoryInput");
@@ -20,9 +20,11 @@ export function checkAllInputsEntered(event) {
 
     document.querySelectorAll(".earningsAndExpensesUL")?.forEach( ele => ele.remove() );
 
-    displayEarnings()
+    const selectedCitiesEarnings = getClickedCities();
+
+    displayEarnings(selectedCitiesEarnings);
     displayExpenses()
-    calculateTotalEarnings()
+    calculateTotalEarnings(selectedCitiesEarnings);
 }
 
 function displayEarnings(selectedCities) {
@@ -31,8 +33,10 @@ function displayEarnings(selectedCities) {
     const citiesList = document.createElement("ul");
 
     citiesList.classList.add("earningsAndExpensesUL");
+
+    console.log(selectedCities);
     
-    arrayCitiesEarnings.forEach( (city) => {
+    selectedCities.forEach( (city) => {
         const li = document.createElement("li");
         li.textContent = `${city.name}: ${city.earnings.toLocaleString()}:-`;
         li.innerHTML += `<div class="greenCircle"></div>`
@@ -62,15 +66,15 @@ function displayExpenses(expenseArray) {
     expensesDisplay.appendChild(expenseList);
 }
 
-function calculateTotalEarnings() {
-    const citiesEarnings = arrayCitiesEarnings;
+function calculateTotalEarnings(selectedCitiesEarnings) {
+
     const allInputExpenseAmounts = document.querySelectorAll(".expenseAmountInput");
     const headerSummary = document.getElementById("summaryHeader");
 
     let totalExpenses = 0;
     allInputExpenseAmounts.forEach( input => totalExpenses += parseInt(input.value));
     let totalEarnings = 0;
-    citiesEarnings.forEach( city => totalEarnings += parseInt(city.earnings));
+    selectedCitiesEarnings.forEach( city => totalEarnings += parseInt(city.earnings));
 
     let totalSummary = totalEarnings - totalExpenses;
 

@@ -2,7 +2,7 @@ import { filterByEarnings } from "../../logic/filters.js";
 
 export function renderHeatmap() {
     
-    const data = filterByEarnings();
+    const data = filterByEarnings({usingForBottomMenu: false});
 
     const maxEarnings = d3.max(data, d => d.earnings);
     const colorScale = d3.scaleSequential().domain([0, maxEarnings]).interpolator(d3.interpolatePurples);

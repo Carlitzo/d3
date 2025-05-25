@@ -50,11 +50,21 @@ export function filterByAmountOfGigs() {
     return amountOfGigsInCities
 }
 
-export function filterByEarnings() {
+export function filterByEarnings({usingForBottomMenu}) {
 
-    const selectedEthnicityText = document.querySelector("#ethnicityButtonsContainer > .selected").textContent.toLowerCase();
-    const selectedGenderText = document.querySelector("#genderButtonsContainer > .selected").textContent.toLowerCase();
-    const selectedYearText = document.querySelector("#yearButtonsContainer > .selected").textContent;
+    let selectedEthnicityText = "";
+    let selectedGenderText = "";
+    let selectedYearText = "";
+
+    if (!usingForBottomMenu) {
+        selectedEthnicityText = document.querySelector("#ethnicityButtonsContainer > .selected").textContent.toLowerCase();
+        selectedGenderText = document.querySelector("#genderButtonsContainer > .selected").textContent.toLowerCase();
+        selectedYearText = document.querySelector("#yearButtonsContainer > .selected").textContent;
+    } else {
+        selectedEthnicityText = document.querySelector("#bottomEthnicityButtonsContainer > .selected").textContent.toLowerCase();
+        selectedGenderText = document.querySelector("#bottomGenderButtonsContainer > .selected").textContent.toLowerCase();
+        selectedYearText = "2024";
+    }
 
     const gigs = Gigs;
     const cities = Cities;
