@@ -1,32 +1,3 @@
-.expenseAmountContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.expenseInputContainer > div {
-    display: flex;
-    gap: 1rem;
-}
-
-.expenseInput {
-    padding: 1rem;
-}
-
-.expenseInput input {
-    border-radius: 2%;
-    border: 1px solid #4C4B4B;
-    background-color: #2F2F2F;
-}
-
-.expenseCategoryContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.removeExpenseBtn {
-    margin-left: 95%;
-}
-
 #btnAddExpense {
     font-size: 1.5rem;
 }
@@ -110,6 +81,17 @@
     margin-top: 1rem;
 }
 
+#expenseAndCalcButtonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnCalc {
+    margin-right: 1rem;
+    width: 7rem;
+    height: 3rem;
+}
+
 .earningsAndExpensesUL {
     margin-top: 3rem;
     display: flex;
@@ -136,4 +118,33 @@
     background-color: red;
     width: 0.7rem;
     height: 0.7rem;
+}
+
+.expenseAmountContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.expenseInputContainer > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.expenseInput {
+    padding: 1rem;
+}
+
+.expenseInput input {
+    border-radius: 2%;
+    border: 1px solid #4C4B4B;
+    background-color: #2F2F2F;
+}
+
+.expenseCategoryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.removeExpenseBtn {
+    margin-left: 95%;
 }
