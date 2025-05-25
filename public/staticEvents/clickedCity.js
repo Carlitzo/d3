@@ -1,5 +1,5 @@
-let colorTracker = 0;
-let letterTracker = 0;
+export let colorTracker = 0;
+export let letterTracker = 0;
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 export function clickedCityEvent(event) {
@@ -39,14 +39,13 @@ export function clickedCityEvent(event) {
 }
 
 export function addClickEventsToPaths() {
-    const svg = d3.select("#bottomMap")
+    d3.select("#bottomMap")
         .select("svg")
         .selectAll("path")
         .on("click", (event) => clickedCityEvent(event));
+}
 
-
-
-    console.log(document.querySelector("#bottomMap > svg"));
-    console.log(svg);
-    
+export function resetCounts() {
+    colorTracker = 0;
+    letterTracker = 0;
 }
