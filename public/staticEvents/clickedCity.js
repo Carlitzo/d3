@@ -1,4 +1,6 @@
 let colorTracker = 0;
+let letterTracker = 0;
+let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 export function clickedCityEvent(event) {
     console.log(event.currentTarget.className)
@@ -18,7 +20,7 @@ export function clickedCityEvent(event) {
 
         const label = document.createElement("div");
 
-        label.textContent = colorTracker / 2;
+        label.textContent = letters[letterTracker];
         label.style.position = "absolute";
         label.style.left = `${x}px`;
         label.style.top = `${y}px`;
@@ -28,7 +30,7 @@ export function clickedCityEvent(event) {
 
         svg.appendChild(label);
 
-
+        letterTracker++;
     }
           // Add a check to see if selected
 
