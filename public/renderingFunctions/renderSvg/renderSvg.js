@@ -1,6 +1,6 @@
 import { renderHeatmap } from "../renderHeatmap/renderHeatmap.js";
 
-export function renderSvg() {
+export async function renderSvg() {
     const parents = document.querySelectorAll(".mapSvg");
 
     fetch("./images/china.svg")
@@ -11,10 +11,7 @@ export function renderSvg() {
             const importedSvg = svgDoc.documentElement;
 
             parents.forEach((parent, index) => {
-                const svg = d3.select(parent)
-                    .append("svg")
-                    .attr("width", "100%")
-                    .attr("height", "100%");
+                
 
                 const clone = importedSvg.cloneNode(true);
 
@@ -35,18 +32,22 @@ export function renderSvg() {
                     defs.appendChild(pattern);
                     clone.insertBefore(defs, clone.firstChild);
     
-                    svg.node().appendChild(clone);
+                    parent.appendChild(clone);
     
                     d3.select(clone)
+                        .attr("width", "100%")
+                        .attr("height", "100%")
                         .selectAll("path")
                         .attr("fill", "url(#diagonalHatch)")
                         .attr("stroke", "white")
                         .attr("stroke-width", 1);   
                 } else {
 
-                    svg.node().appendChild(clone);
+                    parent.appendChild(clone);
 
                     d3.select(clone)
+                        .attr("width", "100%")
+                        .attr("height", "100%")
                         .selectAll("path")
                         .attr("stroke", "white")
                         .attr("stroke-width", 1);

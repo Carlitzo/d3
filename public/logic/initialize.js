@@ -7,10 +7,11 @@ import { renderBars } from "./../renderingFunctions/renderBars/renderBars.js";
 import { updateBars } from "./../renderingFunctions/renderBars/renderBars.js";
 import { renderHeatmap } from "./../renderingFunctions/renderHeatmap/renderHeatmap.js";
 import { renderBottomButtons } from "../renderingFunctions/renderBottomButtons/renderBottomButtons.js";
+import { addClickEventsToPaths } from "../staticEvents/clickedCity.js";
 
 export function initialize () {
 
-    renderSvg("upperMap");
+    renderSvg();
     renderCities("citiesContainerTop");
     renderCities("citiesContainerBottom");
     renderTopButtons("ethnicityButtonsContainer");
@@ -21,6 +22,10 @@ export function initialize () {
     addExpenseButtonEvent();
     updateBars();
     renderHeatmap();
+
+    setTimeout(() => {
+        addClickEventsToPaths();
+    }, 250);
 
     renderBottomButtons("bottomEthnicityButtonsContainer");
     renderBottomButtons("bottomGenderButtonsContainer");
