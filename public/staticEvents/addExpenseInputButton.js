@@ -4,7 +4,7 @@ export function addExpenseButtonEvent(event) {
     const expenseInput = document.querySelectorAll(".expenseInput");
 
     if (expenseInput.length > 11) {
-        console.log("max number added cuuh");
+        self.alert("You already have the maximum number of 'Expenses' added.");
         return;
     }
 
