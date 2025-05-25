@@ -32,10 +32,6 @@ export function clickedCityEvent(event) {
 
         letterTracker++;
     }
-          // Add a check to see if selected
-
-
-    
 }
 
 export function addClickEventsToPaths() {
