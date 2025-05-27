@@ -18,9 +18,9 @@ export function renderBars() {
     const maxAmountOfGigs = d3.max(data, d => d.amountOfGigs);
     
     svg = d3.select("#barsContainer")
-    .append("svg")
-    .attr("width", svgWidth)
-    .attr("height", svgHeight);
+        .append("svg")
+        .attr("width", svgWidth)
+        .attr("height", svgHeight);
     
     const boundingRect = svg.node().getBoundingClientRect();
     const width = boundingRect.width;
@@ -47,7 +47,7 @@ export function renderBars() {
         .data(data)
         .enter()
         .append("rect")
-        .attr("width", d => xScale(d.amountOfGigs) - xScale(0))
+        .attr("width", d => xScale(d.amountOfGigs) - padding.left)
         .attr("height", barwidth)
         .attr("x", padding.left)
         .attr("y", (d, i, nodes) => yScale(d))
@@ -68,7 +68,7 @@ export function updateBars() {
         .data(newData)
         .transition()
         .duration(700)
-        .attr("width", d => xScale(d.amountOfGigs) - xScale(0))
+        .attr("width", d => xScale(d.amountOfGigs) - padding.left)
         .attr("fill", (d, i, nodes) => colorScale(d.amountOfGigs));
 
 };

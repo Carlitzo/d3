@@ -30,5 +30,4 @@ export function initialize () {
     renderBottomButtons("bottomEthnicityButtonsContainer");
     renderBottomButtons("bottomGenderButtonsContainer");
 
-
 }

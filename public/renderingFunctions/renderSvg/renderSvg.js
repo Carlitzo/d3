@@ -27,7 +27,7 @@ export async function renderSvg() {
                     path.setAttribute("d", "M0,0 l6,6");
                     path.setAttribute("stroke", "#1E1E1E");
                     path.setAttribute("stroke-width", "1");
-    
+
                     pattern.appendChild(path);
                     defs.appendChild(pattern);
                     clone.insertBefore(defs, clone.firstChild);
