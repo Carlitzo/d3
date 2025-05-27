@@ -88,12 +88,6 @@ export function filterByEarnings({usingForBottomMenu}) {
         })
     }
 
-    let earnings = 0;
-
-    for (let element of filteredGigs) {
-        earnings += element.djEarnings;
-    }
-
     let citiesWithEarnings = [];
     for (let city of cities) {
         citiesWithEarnings.push( {

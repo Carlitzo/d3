@@ -7,8 +7,6 @@ export function renderHeatmap() {
     const maxEarnings = d3.max(data, d => d.earnings);
     const colorScale = d3.scaleSequential().domain([0, maxEarnings]).interpolator(d3.interpolatePurples);
 
-    const svg = d3.select("#upperMap > svg");
-
     data.forEach((element) => {
         let color = colorScale(element.earnings);
 
